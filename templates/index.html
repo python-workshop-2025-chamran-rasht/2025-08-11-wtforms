@@ -6,6 +6,13 @@
         <title>Homepage</title>
     </head>
     <body>
+        <header>
+            <nav>
+                <a href="/">Homepage</a>,
+                <a href="/login">Login</a>
+            </nav>
+        </header>
+
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
@@ -16,11 +23,13 @@
         {% endif %}
         {% endwith %}
 
+        {% block content %}
         <h1>Homepage</h1>
 
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Perspiciatis, eum? Autem sapiente, nostrum magnam earum fuga ipsum
             culpa minus architecto praesentium qui quidem error perspiciatis
             recusandae vel, pariatur, quis dolorum.</p>
+        {% endblock %}
     </body>
 </html>
