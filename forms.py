@@ -7,3 +7,8 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired(), Length(8)])
     remember_me = BooleanField('Remember me')
     submit = SubmitField('Sign in')
+
+class SignupForm(FlaskForm):
+    # remove the following function block when you submit your code:
+    def __init__():
+        raise NotImplemented("this should be implemented")
